@@ -1,0 +1,306 @@
+* {
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    /* this is what allows room to scroll */
+    scroll-snap-align: start;
+}
+
+#main-display {
+    background-image: url('./background-werk-2.jpg');
+    background-repeat: no-repeat;
+    background-size: 98%;
+    /* Adjust this value to zoom in/out */
+    background-position: center;
+    /* Change this value to position the image differently */
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-130%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#free-class-btn {
+    background-color: transparent;
+    color: red;
+    padding: 43px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    animation: slide-down 1s ease-in-out forwards;
+}
+
+#free-class-btn:hover {
+    background-color: rgb(16, 47, 134);
+    cursor: pointer;
+    font-weight: bolder;
+    border: 1px solid red;
+}
+
+tr {
+    padding: 4px;
+}
+
+td {
+    padding: 2px;
+}
+
+#table-schedule {
+    border: 2px solid black;
+    border-radius: 45%;
+    padding: 105px;
+    margin: 3px;
+    background-color: #c496fcb7;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+td:hover {
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+tr:hover {
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#monday-text {
+    color: #00f5d4;
+    font-weight: bold;
+}
+
+#tuesday-text {
+    color: #fee440;
+    font-weight: bold;
+}
+
+#wednesday-text {
+    color: #f15bb5;
+    font-weight: bold;
+}
+
+#thursday-text {
+    color: #00bbf9;
+    font-weight: bold;
+}
+
+#friday-text {
+    color: #f8961e;
+    font-weight: bold;
+}
+
+#saturday-text {
+    color: #80ed99;
+    font-weight: bold;
+}
+
+@keyframes wave {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(1.18);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+#monday-class:hover,
+#monday-class-2:hover {
+    text-decoration: underline;
+    text-decoration-color: #00f5d4;
+    text-underline-offset: 5px;
+    cursor: pointer;
+    animation: wave 1s linear infinite;
+}
+
+#tuesday-class:hover {
+    text-decoration: underline;
+    text-decoration-color: #fee440;
+    text-underline-offset: 5px;
+    cursor: pointer;
+    animation: wave 1s linear infinite;
+}
+
+#wednesday-class:hover,
+#wednesday-class-2:hover {
+    text-decoration: underline;
+    text-decoration-color: #f15bb5;
+    text-underline-offset: 5px;
+    cursor: pointer;
+    animation: wave 1s linear infinite;
+}
+
+#thursday-class:hover {
+    text-decoration: underline;
+    text-decoration-color: #00bbf9;
+    text-underline-offset: 5px;
+    cursor: pointer;
+    animation: wave 1s linear infinite;
+}
+
+#friday-class:hover {
+    text-decoration: underline;
+    text-decoration-color: #f8961e;
+    text-underline-offset: 5px;
+    cursor: pointer;
+    animation: wave 1s linear infinite;
+}
+
+#saturday-class:hover {
+    text-decoration: underline;
+    text-decoration-color: #80ed99;
+    text-underline-offset: 5px;
+    cursor: pointer;
+    animation: wave 1s linear infinite;
+}
+
+#class-schedule-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 70px;
+    opacity: 1;
+    color: white;
+}
+
+#class-learn-more-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    opacity: 1;
+    color: white;
+}
+
+nav {
+    background: rgba(254, 31, 31, 0.868);
+    overflow: hidden;
+    width: 100%;
+    border: 3px outset black;
+    font-family: 'Barlow', sans-serif;
+    opacity: 0.8;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #1b44fad5;
+    text-decoration: underline;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+
+#carousel {
+    margin: 10px;
+    width: 95%;
+    height: 93%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+#carousel img {
+    display: inline-block;
+    height: 450px;
+    margin-right: 3px;
+}
+
+.carousel-parent {
+    position: relative;
+}
+
+.about-wdf {
+    padding: 10px;
+    margin: 15px;
+}
+
+#who-we-are {
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+}
+
+#who-we-are-p1 {
+    color: #00bbf9;
+}
+
+#who-we-are-p2 {
+    color: #9b5de5;
+}
+
+#who-we-are-p3 {
+    color: #fee440;
+}
+
+#who-we-are-p4 {
+    color: #f15bb5;
+}
+
+#meet-our-staff {
+    color: white;
+    font-size: 20px;
+}
+
+.instructors-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+    margin: 7px;
+}
+
+.instructors {
+    display: flex;
+    align-items: center;
+}
+
+.instructor-name {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    margin-left: 1rem;
+    font-family: 'Satisfy', cursive;
+    font-size: 130px;
+}
+
+.instructor-description {
+    margin-right: 1rem;
+}
+
+.instructor-description p {
+    margin: 0;
+}
+
+#contact-us-section {
+    color: white;
+}
